@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="user" extends="struts-default" namespace="/">
+		<action name="user_*" class="userAction" method="{1}">  
+			<result name="save" type="redirectAction">user_getAll</result>
+			<result name="delete" type="redirectAction">user_getAll</result>
+			<result name="update" type="redirectAction">user_getAll</result>
+			<result name="getAll" type="dispatcher">/index.jsp</result>
+			<result name="findById">/update.jsp</result>
+		</action>
+	</package>
+</struts>
